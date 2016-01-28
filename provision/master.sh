@@ -56,7 +56,7 @@ EOF
 # Now configure Hiera
 cat > /var/tmp/configure_hiera.pp << 'EOF'
 class { 'hiera':
-  hiera_yaml => '/etc/puppetlabs/code',
+  hiera_yaml => '/etc/puppetlabs/code/hiera.yaml',
   hierarchy  => [
     'nodes/%{clientcert}',
     '%{environment}',
