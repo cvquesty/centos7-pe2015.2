@@ -62,6 +62,7 @@ class { 'hiera':
     'common',
   ],
   logger   => 'console',
+  datadir  => '/etc/puppetlabs/code/environments/%{environment}/hieradata'
 }
 EOF
 
@@ -72,7 +73,7 @@ EOF
 /opt/puppetlabs/puppet/bin/puppet apply /var/tmp/configure_directory_environments.pp
 
 # Then Configure Hiera
-/opt/puppet/bin/puppet apply /var/tmp/configure_hiera.pp
+/opt/puppetlabs/puppet/bin/puppet apply /var/tmp/configure_hiera.pp
 
 # Move the r10k.yaml to the new location
 /usr/bin/mv /etc/r10k.yaml /etc/puppetlabs/r10k/r10k.yaml
