@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Define the Master VM Characteristics
   config.vm.define 'master' do |master|
     master.vm.network :private_network, :ip => '10.10.100.100'
-    master.vm.network "forwarded_port", guest: 443, host: 9443
+    master.vm.network "forwarded_port", guest: 443, host: 8443
     master.vm.hostname = 'master.puppetlabs.vm'
 
   # Configure Master VM Settings
@@ -42,7 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   master.vm.provision :pe_bootstrap do |provisioner|
     provisioner.role = :master
   end
-    master.vm.provision :shell, path: "master.sh"
+    master.vm.provision :shell, path: "provision/master.sh"
   end
 
 ###################
@@ -73,7 +73,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     provisioner.role = :agent
     provisioner.master = 'master.puppetlabs.vm'
   end
-    development.vm.provision :shell, path: "development.sh"
+    development.vm.provision :shell, path: "provision/development.sh"
   end
 
 ################
@@ -104,7 +104,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     provisioner.role = :agent
     provisioner.master = 'master.puppetlabs.vm'
   end
-    testing.vm.provision :shell, path: "testing.sh"
+    testing.vm.provision :shell, path: "provision/testing.sh"
   end
 
 ###################
@@ -135,6 +135,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     provisioner.role = :agent
     provisioner.master = 'master.puppetlabs.vm'
   end
-    production.vm.provision :shell, path: "production.sh"
+    production.vm.provision :shell, path: "provision/production.sh"
   end
 end
