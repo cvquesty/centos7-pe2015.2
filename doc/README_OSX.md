@@ -1,4 +1,4 @@
-#Linux Installation Instructions
+#OSX Installation Instructions
 
 ###Required Software
 
@@ -12,9 +12,7 @@
 	
 **Install Git**
 
-If it isn't already installed, install Git via your package management system.  E.g.:
-
-	sudo yum -y install git
+If it isn't already installed, install Git via the Apple Command Line Utilities from Apple's https://developer.apple.com website.
 
 **Install Vagrant Plugins**
 
