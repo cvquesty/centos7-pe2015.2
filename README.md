@@ -12,8 +12,8 @@ Puppet Agents 1-3, all customized to the following three environments:<br>
 
 **Instructional Documentation:**
 
-[OSX Installation](https://github.com/cvquesty/centos7-pe2015.2/doc/README_OSX.md)
+[OSX Installation](https://github.com/cvquesty/centos7-pe2015.2/blob/master/doc/README_OSX.md)
 
-[Linux Installation](https://github.com/cvquesty/centos7-pe2015.2/doc/README_Linux.md)
+[Linux Installation](https://github.com/cvquesty/centos7-pe2015.2/blob/master/doc/README_Linux.md)
 
-[Windows Installation](https://github.com/cvquesty/centos7-pe2015.2/doc/README_Linux.md)
+[Windows Installation](https://github.com/cvquesty/centos7-pe2015.2/blob/master/doc/README_Winows.md)
