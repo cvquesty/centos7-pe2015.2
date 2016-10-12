@@ -1,1 +1,1 @@
-Vagrantfile linguist-language=Vagrant
+^Vagrantfile$ linguist-vendored
